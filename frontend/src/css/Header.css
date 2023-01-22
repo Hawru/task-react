@@ -1,0 +1,36 @@
+.bg-header{
+    background-color: #310B0B;
+}
+.Header h3{
+    color: #E2703A;
+}
+
+.Header button{
+    color: #E2703A;
+}
+
+.Header .sign-InBtn{
+    background-color: #EEB76B;
+}
+
+.Header .sign-InBtn:hover{
+    background-color: #E2703A;
+    color: #EEB76B;
+}
+
+.Header .log-InBtn{
+    border: #EEB76B solid 1px;
+}
+
+.Header .log-InBtn:hover{
+    border: #E2703A solid 1px;
+    color: #EEB76B;
+}
+
+.Header a{
+    text-decoration: none;
+}
+
+.Header .logo:hover{
+    color: #EEB76B;
+}

@@ -1,0 +1,18 @@
+.bg-footer{
+    background-color: #310B0B;
+}
+.Footer h4, .Footer h6{
+    color: #E2703A;
+}
+
+.Footer a{
+    text-decoration: underline;
+}
+
+.Footer a{
+    color: #E2703A;
+}
+
+.Footer a:hover{
+    color:#EEB76B;
+}
