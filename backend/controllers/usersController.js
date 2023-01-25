@@ -18,11 +18,33 @@ const getAllUsers = asyncHandler(async (req, res) => {
     res.json(users)
 })
 
+// @desc Get user by ID
+// @route GET /users
+// @access Private
+const getUserById = asyncHandler(async (req, res) => {
+    const { id } = req.body
+
+    // Confirm data
+    if (!id) {
+        return res.status(400).json({ message: 'User ID Required' })
+    }
+    
+    // Get user from MongoDB
+    const user = await User.findById(id).select('-password').lean()
+
+    // If no user 
+    if (!user) {
+        return res.status(400).json({ message: 'No user found' })
+    }
+
+    res.json(user)
+})
+  
 // @desc Create new user
 // @route POST /users
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
-    const { name, lastname, username, email, password, birthdate, imgprofile } = req.body
+    const { name, lastname, username, email, password, birthdate, imgprofile, active } = req.body
 
     // Confirm data
     if (!name || !username || !password || !email) {
@@ -34,6 +56,13 @@ const createNewUser = asyncHandler(async (req, res) => {
 
     if (duplicate) {
         return res.status(409).json({ message: 'Duplicate username' })
+    }
+
+    // Check for duplicate email
+    const duplicate2 = await User.findOne({ email }).lean().exec()
+
+    if (duplicate2) {
+        return res.status(409).json({ message: 'Duplicate email' })
     }
 
     // Hash password 
@@ -129,6 +158,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 
 module.exports = {
     getAllUsers,
+    getUserById,
     createNewUser,
     updateUser,
     deleteUser

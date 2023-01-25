@@ -24,13 +24,13 @@ const taskSchema = new mongoose.Schema(
             type: String,
             default: "Not important"
         }],
-        Date: {
+        date: {
             type: Date,
             required: true
         },
         done: {
             type: Boolean,
-            default: false
+            default: true
         }
     },
     {

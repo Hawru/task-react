@@ -21,10 +21,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    birthdate: [{
+    birthdate: {
         type: Date,
         default: null
-    }],
+    },
     imgprofile: {
         type: String,
         default: "../public/images/profile.jpg"

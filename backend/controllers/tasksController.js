@@ -23,6 +23,29 @@ const getAllTasks = asyncHandler(async (req, res) => {
     }))
 
     res.json(tasksWithUser)
+    
+})
+
+// @desc Get task by ID
+// @route GET /task
+// @access Private
+const getTaskById = asyncHandler(async (req, res) => {
+    const { id } = req.body
+
+    // Confirm data
+    if (!id) {
+        return res.status(400).json({ message: 'Task ID Required' })
+    }
+    
+    // Get user from MongoDB
+    const task = await Task.findById(id).lean()
+
+    // If no user 
+    if (!task) {
+        return res.status(400).json({ message: 'No task found' })
+    }
+
+    res.json(task)
 })
 
 // @desc Create new task
@@ -120,6 +143,7 @@ const deleteTask = asyncHandler(async (req, res) => {
 
 module.exports = {
     getAllTasks,
+    getTaskById,
     createNewTask,
     updateTask,
     deleteTask
