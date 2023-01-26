@@ -1,0 +1,42 @@
+.bg-formSignUp{
+    background-color: #F0ECCF;
+    height: 100vh;
+}
+.bg-contFormSignUp{
+    background-color: #FFFFFF ;
+    border: #E2703A solid 2px;
+}
+
+.FormSignUp label{
+    color:#000000;
+    font: bold;
+}
+.FormSignUp .btn-login{
+    background-color: #E2703A;
+    color: #FFFFFF;
+}
+
+.FormSignUp .btn-login:hover{
+    background-color: #310B0B;
+    color: #E2703A;
+}
+
+.FormSignUp input:focus-visible{
+    border: #E2703A 2px solid;
+    box-shadow: none;
+}
+
+.FormSignUp .newAccLogin{
+    padding-top: 20px;
+    border-top: #E2703A solid 1px;
+}
+
+.FormSignUp a{
+    text-decoration: none;
+    color: #E2703A;
+}
+
+.FormSignUp .required{
+    color: #E2703A;
+    font-weight: bold;
+}

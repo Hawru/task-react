@@ -1,0 +1,38 @@
+.bg-formLogin{
+    background-color: #F0ECCF;
+    height: 100vh;
+}
+.bg-contFormLogin{
+    background-color: #FFFFFF ;
+    border: #E2703A solid 2px;
+}
+
+.FormLogin label{
+    color:#000000;
+    font: bold;
+}
+.FormLogin .btn-login{
+    background-color: #E2703A;
+    color: #FFFFFF;
+}
+
+.FormLogin .btn-login:hover{
+    background-color: #310B0B;
+    color: #E2703A;
+}
+
+.FormLogin input:focus-visible{
+    border: #E2703A 2px solid;
+    box-shadow: none;
+}
+
+.FormLogin .newAccLogin{
+    padding-top: 20px;
+    border-top: #E2703A solid 1px;
+}
+
+.FormLogin a{
+    text-decoration: none;
+    color: #E2703A;
+}
+

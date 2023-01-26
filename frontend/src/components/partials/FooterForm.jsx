@@ -1,9 +1,9 @@
 import React from 'react'
-import '../../css/partials/Footer.css'
+import '../../css/partials/FooterForm.css'
 
-function Footer() {
-    return (
-      <footer className="Footer bg-footer fixed-bottom">
+function FooterForm() {
+  return (
+    <footer className="FooterForm bg-footerForm fixed-bottom">
           <div className='container'>
             <div className="row d-flex justify-content-between align-items-center py-2">
                 <h4 className='col-md-12'>@A small Project with MERN</h4>
@@ -18,7 +18,7 @@ function Footer() {
             </div>
         </div>
       </footer>
-    );
-  }
-  
-  export default Footer;
+  )
+}
+
+export default FooterForm
